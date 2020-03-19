@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Which of us game</title>
+</head>
+
+<body>
+    <div id="welcome">
+        <span id="game_name">Which</span>
+        <span id="game_name">of</span>
+        <span id="game_name">us</span>
+        <span id="game_name">?</span>
+        <span id="continue" onclick="next()">Tap to continue</span>
+    </div>
+
+    <div id="game">
+        <ol>
+            <li id="question">Кто из Вас более мечтателен?</li>
+            <li id="question">Кто из Вас более терпелив?</li>
+            <li id="question">Кто из Вас чаще меняет свое мнение?</li>
+        </ol>
+    </div>
+    <div id="buttons_win">
+        <div id="popup" class="popup" onclick="myFunction()">Правила
+            <span class="popuptext" id="myPopup">Читайте вопросы по очереди, в течении 5-10 секунд укажите на человека, наиболее подходящего к вопросу</span>
+        </div>
+        <button id="next_button" onclick="nextQuestion()">NEXT</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

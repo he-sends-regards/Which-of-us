@@ -1,0 +1,105 @@
+@font-face {
+    width: 100%;
+    font-family: mandys;
+    src: url(fonts/mandys.otf);
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: mandys;
+    text-transform: uppercase;
+}
+
+#welcome {
+    height: 70vh;
+    margin-top: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    font-size: 2em;
+}
+
+#game {
+    display: none;
+    font-size: 2em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 25%;
+}
+
+#welcome span:nth-child(2),
+#welcome span:nth-child(4) {
+    animation: left_spin 2s;
+}
+
+#welcome span:nth-child(3),
+#welcome span:nth-child(5) {
+    animation: right_spin 2s;
+}
+
+#welcome span:nth-child(6) {
+    animation: vibro 1s ease infinite;
+}
+
+#next_button {
+    display: none;
+    color: inherit;
+    border: 0;
+    background-color: transparent;
+}
+
+#next_button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border-radius: 30%;
+}
+
+@keyframes left_spin {
+    from {
+        transform: rotate(0deg);
+        margin-right: 100%;
+    }
+    25%,
+    50% {
+        color: #FF4364;
+    }
+    to {
+        transform: rotate(360deg);
+        margin-right: 0%;
+    }
+}
+
+@keyframes right_spin {
+    from {
+        transform: rotate(0deg);
+        margin-left: 100%;
+    }
+    25%,
+    50% {
+        color: #FF4364;
+    }
+    to {
+        transform: rotate(360deg);
+        margin-left: 0%;
+    }
+}
+
+@keyframes vibro {
+    from {
+        font-size: 100%;
+    }
+    50% {
+        font-size: 102%;
+        color: red;
+    }
+    to {
+        font-size: 100%;
+    }
+}
